@@ -1,0 +1,12 @@
+/* Default styles for larger screens */
+.responsive-text {
+    font-size: 35px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 468px) {
+    .responsive-text {
+      font-size: 20px;
+      margin-top: 20px; /* Adjust the font size for smaller screens */
+    }
+  }

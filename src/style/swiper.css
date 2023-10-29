@@ -1,0 +1,26 @@
+
+  
+  /* Change text color of the navigation buttons */
+  .swiper-button-prev::after, .swiper-button-next::after {
+    color: #ffd84b; /* Change to your desired text color */
+  }
+  .swiper-pagination-bullet {
+    background-color: #ffd84b;
+ 
+  }
+  .swiper-container .swiper-pagination-bullet {
+ 
+    margin-top: 50px;
+}
+  /* Optionally, you can add hover effects to the bullets */
+  .swiper-pagination-bullet:hover {
+    background-color: #ffd84b;
+  }
+  
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px);
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+    margin-top: 100px;
+}
