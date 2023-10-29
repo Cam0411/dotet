@@ -76,7 +76,7 @@ function DetailProduct() {
   }, [slug, relatedProducts]);
 
   return (
-    <div className="bg-[rgb(112,1,20)] min-h-[100vh] p-3">
+    <div className="bg-gradient-to-r to-[#bb2d0d] from-[#700114] min-h-[100vh] p-3">
       <div className="pt-[150px] max-w-[1200px] ml-auto mr-auto">
         {products ? (
           <div className="flex md:flex-row flex-col">

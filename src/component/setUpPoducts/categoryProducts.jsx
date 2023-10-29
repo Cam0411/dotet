@@ -27,7 +27,7 @@ const Category = () => {
       };
    
     return (
-        <div class=" bg-[#700114]">
+        <div class=" bg-gradient-to-r to-[#bb2d0d] from-[#700114]">
             <div class="h-auto max-w-[1200px]  ml-auto mr-auto ">
             <div class="min-h-[200px] ">
                 <div class="max-w-[1200px] mr-auto ml-auto h-auto p-3 mt-[80px]">

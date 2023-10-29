@@ -12,7 +12,7 @@ const Header = () => {
     }
     const location = useLocation();
     return (
-        <div class="min-h-[80px] bg-gradient-to-r from-[#700114] to-[#700114] fixed top-0 left-0 right-0 shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-10 ">
+        <div class="min-h-[80px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] fixed top-0 left-0 right-0 shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-10 ">
          <div class=" flex justify-between items-center w-full h-[80px] "> 
            <div class="bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] rounded-r-full w-[80%] xl:w-[30%] md:w-[40%] h-full flex justify-start items-center">
            <h1 class="md:text-[42px] sm:text=[32px]  text-[26px] bg-clip-text text-transparent bg-gradient-to-r from-[#700114] to-[#a3262a] font-black px-10">HÀ SHOP</h1>
@@ -42,7 +42,7 @@ const Header = () => {
             ismenu ? (
                 <div>
                       <MobileMenu animationMenu={'animation-open-menu'}/>
-                      <div class="fixed h-[100%] w-[30%] inset-y-0 right-0 cursor-pointer z-50" onClick={closeMenu}></div>
+                      <div class="fixed h-[100%] w-[100%] inset-y-0 right-0 cursor-pointer z-10 bg-[#0004]" onClick={closeMenu}></div>
                 </div>
             ) : (
                 <div>

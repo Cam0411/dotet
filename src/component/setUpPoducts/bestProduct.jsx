@@ -35,7 +35,7 @@ const BestProduct = () => {
      }
   
     return (
-        <div class="min-h-[500px] bg-[#700114] p-3  mt-[40px]" >
+        <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] p-3  mt-[40px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
         <div class="w-full text-white flex justify-between items-center mt-5 flex-col md:flex-row">
                <h1 class="ml-[20px] text-[22px] font-bold">Sản phẩm bán chạy</h1>
@@ -72,7 +72,7 @@ const BestProduct = () => {
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 autoplay={{
-                   
+                    delay:3000,
                     disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
                   }}
                 breakpoints={{

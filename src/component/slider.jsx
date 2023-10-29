@@ -3,7 +3,7 @@ import '../style/typeJs.css'
 const Slider = () => {
     return (
 
-      <div className="relative h-[100vh] overflow-hidden bg-gradient-to-r from-[#700114] to-[#a3262a] mt-[80px] ">
+      <div className="relative h-[100vh] overflow-hidden bg-gradient-to-r from-[#bb2d0d] to-[#700114] mt-[80px] ">
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg z-50">
