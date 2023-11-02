@@ -38,7 +38,7 @@ const Popular = () => {
         <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] p-3  mt-[20px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
             <div class="w-full text-white flex justify-between items-center mt-5 flex-col md:flex-row">
-               <h1 class="ml-[20px] text-[22px] font-bold">Sản phẩm Nổi Bật</h1>
+               <h1 class="ml-[20px] text-[22px] font-bold text-[#ffd84b]">Sản phẩm Nổi Bật</h1>
         
           <ul class="hidden  font-medium md:flex ">
           <li class={`mr-5 cursor-pointer text-center  ${category === "li-xi" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("li-xi")}>Lì Xì</li>
@@ -93,15 +93,15 @@ const Popular = () => {
                   <SwiperSlide key={product.id}>
                     <Link to={`/${product.slug}`} >
                     <div
-                      className="cursor-pointer  min-w-[200px] h-[400px] shadow-lg mt-5 mb-10  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
+                      className="cursor-pointer   min-w-[200px] h-[350px] shadow-lg mt-5 mb-10 text-left  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >
                        <img
                         alt={product.photo}
                         src={product.photo}
-                        className="mt-2 w-[150px] ml-auto mr-auto"
+                        className="mt-5 w-[150px] ml-auto mr-auto shadow-lg"
                       />
                       <div className="min-h-[100px]">
-                        <p className="mt-2">{product.category}</p>
+                        <p className="mt-5">{product.category}</p>
                         <h1 className="font-bold">{product.title}</h1>
                         <p>
                           <span className="font-bold">Mã sản phẩm: </span> {product.description}

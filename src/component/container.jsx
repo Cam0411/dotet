@@ -27,7 +27,7 @@ const Container = () => {
               </div>
             </div>
           <BestProduct />
-            <div class="min-h-[200px] bg-white">
+            <div class="min-h-[200px]">
                 <div class="max-w-[1200px] mr-auto ml-auto h-auto p-3">
                     <div class=" grid grid-cols-1 md:grid-cols-2 mt-5  gap-5  relative rounded-md">
                         <div class="  overflow-hidden group rounded-md">
@@ -50,7 +50,7 @@ const Container = () => {
                 </div>
                 <div class="flex flex-col justify-center items-end  mr-5 ml-5 mb-5 md:mb-0">
                    <div class="flex md:w-[80%] w-[100%] mt-5 md:mt-0 justify-between border-2  border-[#000]">
-                     <input type="text" class="w-[70%] outline-none p-2" placeholder="Nhập địa chỉ email"/>
+                     <input type="text" class="w-[70%] outline-none p-2 bg-[#f2f2f2]" placeholder="Nhập địa chỉ email"/>
                      <div class="flex justify-center items-center bg-[#700114] w-[50px]">
                         <AiOutlineMail class="text-white font-black text-[22px]" />
                      </div>
@@ -58,9 +58,7 @@ const Container = () => {
                 </div>
               </div>
             </div>
-            <div class="min-h-[100px] p-3 bg-[#700114] flex justify-center items-center">
-                <p class="text-center text-white font-bold">@ Hà shop 2023</p>
-            </div>
+        
         </div>
     )
 }

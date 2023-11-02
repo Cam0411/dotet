@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Header from "../component/header";
 import Slider from "../component/slider";
 import Container from "../component/container";
+import Footer from "../component/footer"
 const HomePage = () => {
 
     return (
@@ -12,6 +13,7 @@ const HomePage = () => {
            <Header />
            <Slider />
            <Container />
+           <Footer />
         </div>
     )
 }
