@@ -38,13 +38,13 @@ const BestProduct = () => {
         <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] p-3  mt-[40px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
         <div class="w-full text-white flex justify-between items-center mt-5 flex-col md:flex-row">
-               <h1 class="ml-[20px] text-[22px] font-bold text-[#ffd84b]">Sản phẩm bán chạy</h1>
+               <h2 class="ml-[20px] text-[22px] font-bold text-[#ffd84b] underline underline-offset-8">Sản phẩm bán chạy</h2>
         
           <ul class="hidden  font-medium md:flex ">
           <li class={`mr-5 cursor-pointer text-center  ${category === "li-xi" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("li-xi")}>Lì Xì</li>
              <li class={`mr-5 cursor-pointer text-center  ${category === "day-treo-trung-quoc" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("day-treo-trung-quoc")}>Dây Treo Trung Quốc</li>
              <li class={`mr-5 cursor-pointer text-center  ${category === "day-treo-viet-nam" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("day-treo-viet-nam")}>Dây treo Việt Nam</li>
-             <li class={`mr-5 cursor-pointer text-center  ${category === "treo-tuong" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("treo-tuong")}>Treo Tường</li>
+             <li class={`mr-5 cursor-pointer text-center  ${category === "dan-tuong" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("dan-tuong")}>Dán Tường</li>
           </ul>
           <div class=" p-2 block md:hidden mt-5 w-[60%] rounded md:max-w-[200px] text-center cursor-pointer font-bold bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] shadow-lg" onClick={toggleMenu}>
             <p>Phân loại</p>
@@ -54,7 +54,7 @@ const BestProduct = () => {
             <li class={`mr-5  py-2 px-5 cursor-pointer text-center w-full shadow-lg mb-2   ${category === "li-xi" ? "bg-[#a3262a] text-white" : "text-[#000]"} `} onClick={() => handleCategory("li-xi")}>Lì Xì</li>
              <li class={`mr-5  py-2 px-5 cursor-pointer text-center w-full shadow-lg mb-2   ${category === "day-treo-trung-quoc" ? "bg-[#a3262a] text-white" : "text-[#000]"} `} onClick={() => handleCategory("day-treo-trung-quoc")}>Dây Treo Trung Quốc</li>
              <li class={`mr-5  py-2 px-5 cursor-pointer text-center w-full shadow-lg mb-2   ${category === "day-treo-viet-nam" ? "bg-[#a3262a] text-white" : "text-[#000]"} `} onClick={() => handleCategory("day-treo-viet-nam")}>Dây treo Việt Nam</li>
-             <li class={`mr-5  py-2 px-5 cursor-pointer text-center w-full shadow-lg mb-2 mt-2  ${category === "treo-tuong" ? "bg-[#a3262a] text-white" : "text-[#000]"} `} onClick={() => handleCategory("treo-tuong")}>Treo Tường</li>
+             <li class={`mr-5  py-2 px-5 cursor-pointer text-center w-full shadow-lg mb-2 mt-2  ${category === "dan-tuong" ? "bg-[#a3262a] text-white" : "text-[#000]"} `} onClick={() => handleCategory("dan-tuong")}>Dán Tường</li>
             </ul>
    
           </div>
@@ -93,20 +93,20 @@ const BestProduct = () => {
               >
                 {products.slice(0, visibleProducts).map((product) => (
                   <SwiperSlide key={product.id}>
-                    <Link to={`/${product.slug}`} >
+                    <Link to={`/${product.slug}`}   onClick={() => { window.scroll(0, 0)}}>
                     <div
-                      className="cursor-pointer  text-left  min-w-[200px] h-[350px] shadow-lg mt-5 mb-10  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
+                      className="cursor-pointer  text-left  min-w-[200px] min-h-[350px] shadow-lg mt-5 mb-10  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >
                        <img
                         alt={product.photo}
                         src={product.photo}
-                        className="mt-5 w-[150px] ml-auto mr-auto shadow-lg rounded"
+                        className="mt-5 mb-5 max-w-[180px] ml-auto mr-auto shadow-lg rounded"
                       />
                       <div className="min-h-[100px] mt-2">
-                        <p className="mt-2">{product.category}</p>
+                        <span className="mt-2">{product.category}</span>
                         <h1 className="font-bold">{product.title}</h1>
                         <p>
-                          <span className="font-bold">Mã sản phẩm: </span> {product.description}
+                          <span className="font-bold">Mã sản phẩm: </span> {product.codeProduct}
                         </p>
                         <p>
                           <span className="font-bold"> Giá:</span> Liên hệ

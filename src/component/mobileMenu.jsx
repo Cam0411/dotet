@@ -24,7 +24,7 @@ const Menu = ({animationMenu}) => {
                   <li class="w-full p-4 text-[18px] text-[#700114]  flex" onClick={() => window.location.reload()}><Link to="/category/li-xi" class="flex justify-between w-full " >Lì Xì <RiArrowRightSLine class="text-[30px]"  /></Link></li>
                   <li class="w-full p-4 text-[18px] text-[#700114]  flex" onClick={() => window.location.reload()}><Link to="/category/day-treo-trung-quoc" class="flex justify-between w-full text-left"> Dây Treo Trung Quốc <RiArrowRightSLine class="text-[30px]"   /></Link></li>
                   <li class="w-full p-4 text-[18px]  text-[#700114] flex" onClick={() => window.location.reload()}><Link to="/category/day-treo-viet-nam" class="flex justify-between w-full text-left">Dây Treo Việt Nam <RiArrowRightSLine class="text-[30px]"   /></Link></li>
-                  <li class="w-full p-4 text-[18px] text-[#700114] flex" onClick={() => window.location.reload()}><Link to="/category/treo-tuong" class="flex justify-between w-full" >Treo Tường <RiArrowRightSLine class="text-[30px]"   /></Link></li>
+                  <li class="w-full p-4 text-[18px] text-[#700114] flex" onClick={() => window.location.reload()}><Link to="/category/dan-tuong" class="flex justify-between w-full" >Dán Tường <RiArrowRightSLine class="text-[30px]"   /></Link></li>
                  </ul>
                 
                 </div>

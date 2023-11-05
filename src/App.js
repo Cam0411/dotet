@@ -4,7 +4,7 @@ import CategoryPage from "./page/categorypage";
 import PageDetail from "./page/pageDetail";
 import SearchPage from "./page/searchPage";
 import './App.css';
-
+import './style/scollBar.css'
 function App() {
   return (
     <div className="App">

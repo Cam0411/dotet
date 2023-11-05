@@ -15,7 +15,7 @@ const Slider = () => {
                4000, 
               'VẠN SỰ NHƯ Ý',
               4000,
-              'AN KHAN THỊNH VƯỢNG',
+              'AN KHANG THỊNH VƯỢNG',
               4000,
               ]}
              wrapper="span"

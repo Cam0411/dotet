@@ -42,7 +42,7 @@ const Header = () => {
               <Link to="/category/li-xi" className={location.pathname === '/category/li-xi' ? 'text-[#ffd84b] font-bold' : ''}>   <li class="mr-5">Lì xì</li> </Link>
               <Link to="/category/day-treo-trung-quoc" className={location.pathname === '/category/day-treo-trung-quoc' ? 'text-[#ffd84b] font-bold' : ''}>   <li class="mr-5">Dây treo Trung Quốc</li> </Link>
               <Link to="/category/day-treo-viet-nam" className={location.pathname === '/category/day-treo-viet-nam' ? 'text-[#ffd84b] font-bold' : ''}>   <li class="mr-5">Dây treo Việt Nam</li> </Link>
-              <Link to="/category/treo-tuong" className={location.pathname === '/category/treo-tuong' ? 'text-[#ffd84b] font-bold' : ''}>  <li class="">Đồ treo tường</li> </Link> 
+              <Link to="/category/dan-tuong" className={location.pathname === '/category/dan-tuong' ? 'text-[#ffd84b] font-bold' : ''}>  <li class="">Dán Tường</li> </Link> 
              </ul> 
              <div class="text-white mr-2 flex xl:hidden cursor-pointer">
                 <AiOutlineMenu class="text-[32px] " onClick={openMenu}/>

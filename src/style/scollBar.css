@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+   /* Set the background color of the track */
+   background: #700114; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+ /* Set the color of the thumb */
+    background: linear-gradient(45deg, #bb2d0d, #700114);
+     /* Round the corners of the thumb */
+  }

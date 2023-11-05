@@ -1,24 +1,22 @@
 import { AiOutlineMail } from "react-icons/ai"
-// import {LiaStoreAltSolid} from "react-icons/li"
-// import {FiMessageSquare} from "react-icons/fi" 
-import { useState,useEffect } from "react"
-import axios from "axios"
 import Popular from "./setUpPoducts/popular"
 import BestProduct from "./setUpPoducts/bestProduct";
+import AllCategoryProduct from "./setUpPoducts/allProduct";
 const Container = () => {
 
     return (
         <div class="min-h-[100vh] ">
+              <AllCategoryProduct />
             <div class="max-w-[1200px] mr-auto ml-auto h-auto p-3">
-
-               <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-2 mt-10">
+          
+               <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-4 ">
                 <div class="bg-white border-2 border-[#f2f2f2] shadow-lg rounded-lg min-h-[200px]  p-3 flex flex-col justify-center items-center">
                   <h1 class="font-bold text-[24px] text-[#700114]  ">Đa dạng sản phẩm</h1>
-                  <p>Duyệt qua sự đa dạng vô ngần của sản phẩm trực tuyến và tiết kiệm thời gian mua sắm tại cửa hàng của chúng tôi</p>
+                  <p>Chúng tôi tự hào giới thiệu sự đa dạng của sản phẩm trang trí Tết để đáp ứng mọi phong cách và mong muốn trang trí của bạn</p>
                 </div>
                 <div class="bg-white border-2 border-[#f2f2f2] shadow-lg rounded-lg min-h-[200px]  p-3 flex flex-col justify-center items-center">
-                  <h1 class="font-bold text-[24px] text-[#700114]  ">Tối ưu thời gian</h1>
-                  <p>Sử dụng các dịch vụ trực tuyến tiên tiến để tối ưu hóa thời gian và tạo điều kiện thuận lợi cho cuộc sống hàng ngày.</p>
+                  <h1 class="font-bold text-[24px] text-[#700114]  ">Sản phẩm Độc Đáo </h1>
+                  <p>Lì xì truyền thống hoặc một chiếc đèn lồng hiện đại, chúng tôi có tất cả để giúp bạn tạo nên không gian Tết hoàn hảo và phong cách..</p>
                 </div>
                 <div class="bg-white border-2 border-[#f2f2f2] shadow-lg rounded-lg min-h-[200px]  p-3 flex flex-col justify-center items-center">
                   <h1 class="font-bold text-[24px] text-[#700114]  ">Tiết kiệm thời gian</h1>
