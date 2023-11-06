@@ -32,7 +32,7 @@ const Category = () => {
         <div class=" bg-[#f2f2f2] mb-10 min-h-[200vh]">
             <div class="h-auto ">
             <div class="min-h-[200px] ">
-             <div class="max-w-[1200px] mr-auto ml-auto h-auto p-3 md:mt-[100px] mt-[180px]">
+             <div class="max-w-[1200px] mr-auto ml-auto h-auto py-3 sm:px-3 px-1 md:mt-[100px] mt-[180px]">
                 <div class="text-left flex">
                   <p class="flex font-bold md:text-[16px] text-[14px]"><Link to="/" class="flex items-center font-bold cursor-pointer">Trang chủ <MdOutlineArrowForwardIos class="mx-1" /> </Link> <span class="text-[#700114]">{firstProductCategory}</span>  </p>
                 </div>
@@ -48,32 +48,32 @@ const Category = () => {
             </div>
             <div>
                 <div class="bg-gradient-to-r to-[#bb2d0d] from-[#700114] w-full min-h-[120px] flex justify-center items-center rounded-lg shadow-2xl ">
-                <h1 class="font-black text-center px-2 md:text-[32px] text-[23px]  ml-2 text-white">{firstProductCategory}</h1>
+                <h1 class="font-black text-center px-2 md:text-[32px] text-[26px]  ml-2 text-white">{firstProductCategory}</h1>
 
                 </div>
             {
                 products ? (
                   
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-3 gap-4 max-w-[1200px]   ml-auto mr-auto ">
+                    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 py-3 sm:px-3 px-1 md:gap-4 gap-2 max-w-[1200px]   ml-auto mr-auto ">
                        
                       {products.slice(0, visibleProducts).map((product) => (
-                          <div key={product.id} class="cursor-pointer max-w-[300px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
-                            <Link to={`/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
-                            <div>
-                            <LazyLoadImage
-                             alt={product.photo}
-                            src={product.photo} // use normal <img> attributes as props
-                            class="mt-5 mb-5 2 max-w-[180px] ml-auto mr-auto shadow-lg rounded"
-                             />
-                            <div class="min-h-[100px]">
-                             <span class="mt-2" >{product.category}</span>
-                             <h1 class="font-bold ">{product.title}</h1>
-                             <p> <span class="font-bold">Mã sản phẩm: </span> {product.codeProduct}</p>
-                             <p><span class="font-bold"> Giá:</span>  Liên hệ</p>
-                             </div>
-                            </div>
-                            </Link>
-                          </div>
+                     <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
+                     <Link to={`/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                     <div>
+                     <LazyLoadImage
+                      alt={product.photo}
+                     src={product.photo} // use normal <img> attributes as props
+                     class="mt-5 mb-5 w-full sm:max-w-[180px]   ml-auto mr-auto shadow-lg rounded"
+                      />
+                     <div class="min-h-[100px]">
+                      <span class="mt-2" >{product.category}</span>
+                      <h1 class="font-bold ">{product.title}</h1>
+                      <p> <span class="font-bold">Mã sản phẩm: </span> {product.codeProduct}</p>
+                      <p><span class="font-bold"> Giá:</span>  Liên hệ</p>
+                      </div>
+                     </div>
+                     </Link>
+                   </div>
                          ))}
                     </div>
                 ) : (

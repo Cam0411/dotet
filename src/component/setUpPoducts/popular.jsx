@@ -35,10 +35,10 @@ const Popular = () => {
      }
   
     return (
-        <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] p-3  mt-[20px]" >
+        <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] md:p-3 p-2  mt-[20px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
             <div class="w-full text-white flex justify-between items-center mt-5 flex-col md:flex-row">
-               <h2 class="ml-[20px] text-[22px] font-bold text-[#ffd84b]">Sản phẩm Nổi Bật</h2>
+               <h2 class="ml-[20px] text-[22px] font-bold text-[#ffd84b] underline underline-offset-8">Sản phẩm Nổi Bật</h2>
         
           <ul class="hidden  font-medium md:flex ">
           <li class={`mr-5 cursor-pointer text-center  ${category === "li-xi" ? " text-[#ffd84b] font-bold" : ""} `} onClick={() => handleCategory("li-xi")}>Lì Xì</li>
@@ -60,10 +60,10 @@ const Popular = () => {
             </div>
            {
             products ? (
-                <div class="ml-5 mr-5">
+                <div class="md:ml-5 Md:mr-5 ml-1 mr-1">
                        <Swiper
                 modules={[Navigation, Pagination,Autoplay]}
-                slidesPerView={1}
+                slidesPerView={2}
                 spaceBetween={10}
                 auto={true}
                 navigation={true}
@@ -93,12 +93,12 @@ const Popular = () => {
                   <SwiperSlide key={product.id}>
                     <Link to={`/${product.slug}`}   onClick={() => {window.scroll(0, 0)}} >
                     <div
-                      className="cursor-pointer   min-w-[200px] min-h-[350px] shadow-lg mt-5 mb-10 text-left  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
+                      className="cursor-pointer   w-full min-h-[350px] shadow-lg mt-5 mb-10 text-left p-3 text-[14px] sm:text-[16px] bg-white  relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >
                        <img
                         alt={product.photo}
                         src={product.photo}
-                        className="mt-5 mb-5 max-w-[180px] ml-auto mr-auto shadow-lg border-2"
+                        className="mt-5 mb-5 md:max-w-[180px] w-full  ml-auto mr-auto shadow-lg border-2"
                       />
                       <div className="min-h-[100px]">
                         <span className="mt-5">{product.category}</span>

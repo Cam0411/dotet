@@ -18,7 +18,7 @@ const Menu = ({animationMenu}) => {
           
               <div >
                 <div class="flex flex-col  items-start  min-h-[100vh]">
-                <h1 class="p-4 sm:text-[82px] text-[32px] font-black bg-gradient-to-r from-[#bb2d0d] to-[#700114] text-transparent bg-clip-text">Hà Shop</h1>
+                <h1 class="p-4 text-[52px] font-black bg-gradient-to-r from-[#bb2d0d] to-[#700114] text-transparent bg-clip-text">HÀ</h1>
                 <ul class="flex flex-col text-whte justify-center items-center h-full  font-medium   cursor-pointer text-[20px] mt-10 text-right w-full">
                   <li class="flex w-full text-[18px] text-[#700114]  p-4" ><Link to="/" class="flex justify-between w-full mt-5"> Trang chủ <RiArrowRightSLine class="text-[30px]"   /></Link> </li>
                   <li class="w-full p-4 text-[18px] text-[#700114]  flex" onClick={() => window.location.reload()}><Link to="/category/li-xi" class="flex justify-between w-full " >Lì Xì <RiArrowRightSLine class="text-[30px]"  /></Link></li>

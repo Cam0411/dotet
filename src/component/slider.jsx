@@ -7,7 +7,7 @@ const Slider = () => {
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg z-50">
-          <h1 class="sm:text-[152px] text-[50px] drop-shadow-lg bg-clip-text text-transparent bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] font-black tracking-widest mb-[-20px] mt-[40px] sm:mt-0">2024</h1>
+          <h1 class="sm:text-[152px] text-[50px] drop-shadow-lg bg-clip-text text-transparent bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] font-black tracking-widest mb-[-20px] mt-[60px] sm:mt-0">2024</h1>
                <TypeAnimation
              sequence={[
                 // Same substring at the start will only be typed out once, initially

@@ -38,7 +38,7 @@ const Popular = () => {
         setVisibleProducts(visibleProducts + 8);
       };
     return (
-        <div class="min-h-[490px]  px-3 pt-3 pb-1  mt-[10px]" >
+        <div class="min-h-[490px] px-0  sm:px-3 pt-3 pb-1  mt-[10px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
             <div class="w-full text-black flex justify-between items-center mt-5 flex-col md:flex-row">
                <h2 class="ml-[10px] text-[22px] font-bold text-[#700114] underline underline-offset-8">Sản phẩm tại cửa hàng</h2>
@@ -49,7 +49,7 @@ const Popular = () => {
              <li class={`mr-5 cursor-pointer text-center  ${category === "day-treo-viet-nam" ? " text-[#700114] font-bold" : ""} `} onClick={() => handleCategory("day-treo-viet-nam")}>Dây treo Việt Nam</li>
              <li class={`mr-5 cursor-pointer text-center  ${category === "dan-tuong" ? " text-[#700114] font-bold" : ""} `} onClick={() => handleCategory("dan-tuong")}>Dán Tường</li>
           </ul>
-          <div class=" p-2 block md:hidden mt-5 w-[60%] rounded md:max-w-[200px] text-center cursor-pointer font-bold bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] shadow-lg" onClick={toggleMenu}>
+          <div class=" p-2 block md:hidden mt-5 text-white w-[60%] rounded md:max-w-[200px] text-center cursor-pointer font-bold bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] shadow-lg" onClick={toggleMenu}>
             <p>Phân loại</p>
           </div> 
           <div class={`${modal ? "min-h-[200px] p-2 " : "h-[0px] p-0" } transition-height duration-300   overflow-hidden  shadow-lg mt-2 font-bold w-full bg-white  md:hidden block`}>
@@ -64,16 +64,16 @@ const Popular = () => {
             {
                 products ? (
                   
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-3 gap-4 max-w-[1200px]   ml-auto mr-auto ">
+                    <div class="grid grid-cols-2  md:grid-cols-4 gap-5    p-1 sm:p-3  max-w-[1200px]   ml-auto mr-auto ">
                        
                       {products.slice(0, visibleProducts).map((product) => (
-                          <div key={product.id} class="cursor-pointer max-w-[300px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
+                          <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
                             <Link to={`/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                             <div>
                             <LazyLoadImage
                              alt={product.photo}
                             src={product.photo} // use normal <img> attributes as props
-                            class="mt-5 2 max-w-[180px] ml-auto mr-auto shadow-lg rounded"
+                            class="mt-5 mb-5 w-full sm:max-w-[180px]   ml-auto mr-auto shadow-lg rounded"
                              />
                             <div class="min-h-[100px]">
                              <span class="mt-2" >{product.category}</span>

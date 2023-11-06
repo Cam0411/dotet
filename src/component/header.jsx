@@ -31,7 +31,7 @@ const Header = () => {
         <div class="min-h-[80px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] fixed top-0 left-0 right-0 shadow-lg z-10 ">
          <div class=" flex justify-between items-center w-full h-[80px] "> 
            <div class="bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] rounded-r-full w-[80%] xl:w-[30%] md:w-[40%] h-full flex justify-start items-center">
-           <h1 class="md:text-[42px] sm:text=[32px]  text-[26px] bg-clip-text text-transparent bg-gradient-to-r from-[#700114] to-[#a3262a] font-black p-3">HÀ SHOP</h1>
+           <h1 class="text-[52px]   bg-clip-text text-transparent bg-gradient-to-r from-[#700114] to-[#a3262a] font-black p-3">HÀ</h1>
            </div>
            <div class="hidden md:flex relative border-b-2 overflow-hidden  justify-between items-center text-white bg-white rounded-full shadow-lg  w-[300px]">
           <input class=" h-10 px-3 pr-16  text-black focus:outline-none " type="text"  placeholder="Tìm Kiếm" onChange={handleSearchInputChange}  onKeyPress={searchQuery.length !== 0 ? handleKeyPress : undefined}/>
