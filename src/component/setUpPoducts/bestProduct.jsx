@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
-import axios from "axios";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import {useDispatch,useSelector} from "react-redux"
+import { getProducts } from "../../redux/action/productAPi";
 import { List } from 'react-content-loader';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay} from 'swiper/modules';
@@ -10,30 +10,34 @@ import 'swiper/css/navigation';
 import 'swiper/css';
 import '../../style/swiper.css'
 const BestProduct = () => {
-    const [products,setProduct] = useState();
     const [category,setCategory] = useState("li-xi");
-    const [visibleProducts, setVisibleProducts] = useState(20);
+    const dispatch = useDispatch();
     const [modal,setModal] = useState(false);
     function toggleMenu() {
       setModal(!modal);
     }
-    const apiHaweb = `https://haweb-api.onrender.com/api/product`;
-    useEffect(() => {
-    const apiHawebcategory = `${apiHaweb}/category/${category}`;
-    axios.get(`${apiHawebcategory}`)
-        .then((res) => {
-           setProduct(res.data.product)  
+    // useEffect(() => {
+    // const apiHawebcategory = `${apiHaweb}/category/${category}`;
+    // axios.get(`${apiHawebcategory}`)
+    //     .then((res) => {
+    //        setProduct(res.data.product)  
            
-        })
-        .catch((error) => {
-            console.error('Error fetching products:', error);
-        });
-    },[category])
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error fetching products:', error);
+    //     });
+    // },[category])
+    useEffect(() => {
+      dispatch(getProducts(category));
+    }, [dispatch,category]);
+
     const handleCategory = (cate) => {
         setCategory(cate)
      
      }
-  
+     const productsState = useSelector((state) => state.product.state.products);
+
+   
     return (
         <div class="min-h-[500px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] py-3 sm:px-3 px-1 mt-[40px]" >
         <div class=" max-w-[1200px] mr-auto ml-auto h-auto">
@@ -60,7 +64,7 @@ const BestProduct = () => {
           </div>
             </div>
            {
-            products ? (
+            productsState ? (
                 <div class="md:ml-5 md:mr-5 ml-1 mr-1">
                        <Swiper
                 modules={[Navigation, Pagination,Autoplay]}
@@ -91,9 +95,9 @@ const BestProduct = () => {
                 }}
           
               >
-                {products.slice(0, visibleProducts).map((product) => (
+                {productsState.product.slice(0, 15).map((product) => (
                   <SwiperSlide key={product.id}>
-                    <Link to={`/${product.slug}`}   onClick={() => { window.scroll(0, 0)}}>
+                    <Link to={`/product/${product.slug}`}   onClick={() => { window.scroll(0, 0)}}>
                     <div
                       className="cursor-pointer   w-full min-h-[350px] shadow-lg mt-5 mb-10 text-left p-3 text-[14px] sm:text-[16px] bg-white  relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >
@@ -104,12 +108,12 @@ const BestProduct = () => {
                       />
                       <div className="min-h-[100px]">
                         <span className="mt-5">{product.category}</span>
-                        <h1 className="font-bold">{product.title}</h1>
+                        <h2 className="font-bold">{product.title}</h2>
                         <p>
                           <span className="font-bold">Mã sản phẩm: </span> {product.codeProduct}
                         </p>
                         <p>
-                          <span className="font-bold"> Giá:</span> Liên hệ
+                          <span className="font-bold"> Liên hệ:</span> 0903-133-689
                         </p>
                       </div>
                     </div>

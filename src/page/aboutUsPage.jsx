@@ -1,14 +1,8 @@
-import {IoIosCall} from "react-icons/io"
-import {AiOutlineMail,AiOutlineSearch} from "react-icons/ai"
-import {CiLocationOn} from "react-icons/ci"
-import React, { useState, useEffect } from 'react';
 import Header from "../component/header";
-import Slider from "../component/slider";
-import Container from "../component/container";
-import Footer from "../component/footer"
+import AboutUsContent from "../component/aboutUsContent";
+import Footer from "../component/footer";
 import { Helmet } from 'react-helmet';
-const HomePage = () => {
-
+const AboutUs = () => {
     return (
         <div>
             <Helmet>
@@ -21,12 +15,11 @@ const HomePage = () => {
             <meta name="og:image" content="https://ik.imagekit.io/39wvgoqre/daytreovietnammoi/S2/TP18.png?updatedAt=1699077237272" />
             <title>Chuyên Sỉ Đồ Trang Trí Tết, Đồ Decor Nhà Cửa và Văn Phòng</title>
             </Helmet>
-           <Header />
-           <Slider />
-           <Container />
-           <Footer />
+            <Header />
+            <AboutUsContent />
+            <Footer />
         </div>
     )
 }
 
-export default HomePage
+export default AboutUs;

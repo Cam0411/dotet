@@ -42,7 +42,7 @@ const Search = () => {
                        
                   {products.slice(0, visibleProducts).map((product) => (
                  <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
-                 <Link to={`/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                 <Link to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                  <div>
                  <img
                   alt={product.photo}
@@ -51,9 +51,9 @@ const Search = () => {
                   />
                  <div class="min-h-[100px]">
                   <span class="mt-2" >{product.category}</span>
-                  <h1 class="font-bold ">{product.title}</h1>
+                  <h2 class="font-bold ">{product.title}</h2>
                   <p> <span class="font-bold">Mã sản phẩm: </span> {product.codeProduct}</p>
-                  <p><span class="font-bold"> Giá:</span>  Liên hệ</p>
+                  <p><span class="font-bold"> Liên hệ:</span> 0903-133-689</p>
                   </div>
                  </div>
                  </Link>

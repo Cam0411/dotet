@@ -91,7 +91,7 @@ const Popular = () => {
               >
                 {products.slice(0, visibleProducts).map((product) => (
                   <SwiperSlide key={product.id}>
-                    <Link to={`/${product.slug}`}   onClick={() => {window.scroll(0, 0)}} >
+                    <Link to={`/product/${product.slug}`}   onClick={() => {window.scroll(0, 0)}} >
                     <div
                       className="cursor-pointer   w-full min-h-[350px] shadow-lg mt-5 mb-10 text-left p-3 text-[14px] sm:text-[16px] bg-white  relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >
@@ -102,12 +102,12 @@ const Popular = () => {
                       />
                       <div className="min-h-[100px]">
                         <span className="mt-5">{product.category}</span>
-                        <h1 className="font-bold">{product.title}</h1>
+                        <h2 className="font-bold">{product.title}</h2>
                         <p>
                           <span className="font-bold">Mã sản phẩm: </span> {product.codeProduct}
                         </p>
                         <p>
-                          <span className="font-bold"> Giá:</span> Liên hệ
+                          <span className="font-bold"> Liên hệ:</span> 0903-133-689
                         </p>
                       </div>
                     </div>
