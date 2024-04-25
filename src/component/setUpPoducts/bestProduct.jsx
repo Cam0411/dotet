@@ -97,7 +97,7 @@ const BestProduct = () => {
               >
                 {productsState.product.slice(0, 15).map((product) => (
                   <SwiperSlide key={product.id}>
-                    <Link to={`/product/${product.slug}`}   onClick={() => { window.scroll(0, 0)}}>
+                    <Link rel="canonical" to={`/product/${product.slug}`}   onClick={() => { window.scroll(0, 0)}}>
                     <div
                       className="cursor-pointer   w-full min-h-[350px] shadow-lg mt-5 mb-10 text-left p-3 text-[14px] sm:text-[16px] bg-white  relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >

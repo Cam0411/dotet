@@ -1,5 +1,6 @@
 import Header from "../component/header";
 import AboutUsContent from "../component/aboutUsContent";
+import Social from "../component/social/social";
 import Footer from "../component/footer";
 import { Helmet } from 'react-helmet';
 const AboutUs = () => {
@@ -17,6 +18,7 @@ const AboutUs = () => {
             </Helmet>
             <Header />
             <AboutUsContent />
+            <Social />
             <Footer />
         </div>
     )

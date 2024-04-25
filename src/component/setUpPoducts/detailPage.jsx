@@ -111,7 +111,7 @@ const saveProduct = () => {
      setShowPopUp(false)
   }
    return (
-    <div className=" min-h-[100vh] py-3 sm:px-3 px-2 bg-[#f2f2f2]">
+    <div className=" min-h-[100vh] mt-[50px] py-3 sm:px-3 px-2 bg-[#f2f2f2]">
         
             {
               products  ? (
@@ -123,6 +123,29 @@ const saveProduct = () => {
                   <meta name="author" content="Hà shop" />
                   <meta name="og:title" content="Đồ Tết Chất Lượng Cao - Cửa Hàng Chúng Tôi" />
                   <meta name="og:description" content="Chuyên Cung Cấp Sỉ Lì Xì, Dây Treo, và Dán Tường Đồ Trang Trí Tết Chất Lượng Cho Nhà Cửa và Văn Phòng - Hãy Liên Hệ Chúng Tôi Để Tạo Nên Một Mùa Tết Ấm Áp Và Độc Đáo! " />
+                  <script type="application/ld+json">
+                   {`
+            {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "name": "Your Organization Name",
+              "url": "http://www.your-website-url.com",
+              "logo": "http://www.your-website-url.com/logo.png",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-123-456-7890",
+                  "contactType": "customer service"
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/your-facebook",
+                "https://twitter.com/your-twitter",
+                "https://www.linkedin.com/in/your-linkedin"
+              ]
+            }
+                     `}
+                  </script>
                   </Helmet>
   
                 
@@ -146,7 +169,7 @@ const saveProduct = () => {
               <div className="mt-5">
                 <h2 class="text-[20px] font-bold text-[#700114] mb-2 underline underline-offset-8">Mô tả sản phẩm</h2>
                 <p><span class="font-bold mb-2">Kích thước </span>: {products[0].size}</p>
-                <p><span class="font-bold">Chất Liệu:</span>: {products[0].material}</p>
+                <p><span class="font-bold">Chất Liệu:</span> {products[0].material}</p>
                 <p><span class="font-bold">Mã sản phẩm:</span>: {products[0].codeProduct}</p>
               </div>
               <div class="mt-2">
@@ -155,7 +178,7 @@ const saveProduct = () => {
               </div>
               <div className="flex mt-5">
                 <p className="mt-2 border-2 border-[#700114] py-2 px-4 text-[18px] mr-2 shadow-lg cursor-pointer  text-[#700114] font-bold rounded" onClick={saveProduct}>Lưu sản phẩm</p>
-                <p className="mt-2 bg-[#0058d9] py-2 px-4 text-[18px] shadow-lg cursor-pointer  text-white font-bold rounded">Liên hệ zalo</p>
+                <a class="flex" href="https://zalo.me/0903133689"><p className="mt-2 bg-[#0058d9] py-2 px-4 text-[18px] shadow-lg cursor-pointer  text-white font-bold rounded">Liên hệ zalo</p></a>
               </div>
              </div>
             </div>
@@ -166,40 +189,40 @@ const saveProduct = () => {
         <div class="mt-5 pb-5">
            <h2 class="text-[23px] text-[#700114] font-bold text-center underline underline-offset-8">Tìm kiếm liên quan</h2>
            <ul class="md:flex hidden mt-5 justify-center max-w-[900px] ml-auto mr-auto bg-white shadow-lg rounded-t-full rounded-b-full  rounded-r-full p-3 ">
-             <Link to="/category/li-xi"><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/lixi/44078530e517314968068.jpg?updatedAt=1697721108570" class="rounded-full ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px]  shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Lì Xì </p></li></Link> 
-             <Link to="/category/day-treo-trung-quoc"><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/day%20treo%20trung%20quoc/27%20day%20treo/ed893a6f7dc5a99bf0d4143.jpg?updatedAt=1698066729993" class="rounded-full ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px] shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Dây treo Trung Quốc </p></li> </Link>
-             <Link to="/category/day-treo-viet-nam"><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/day%20treo%20viet%20nam/44%20day%20treo/f94fdd6971c5a59bfcd4577.jpg?updatedAt=1698067151377" class="rounded-full md:w-[110px]  md:h-[110px] w-[80px] h-[80px] ml-auto mr-auto  shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px] ">Dây treo Việt Nam </p></li> </Link>
-             <Link to="/category/dan-tuong"><li class="flex flex-col justify-around items-center p-3 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/c3fcb21f1eb3caed93a2593.jpg?updatedAt=1697719352705" class="rounded-full  ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px] shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Dán Tường</p></li> </Link>
+             <Link rel="canonical" to="/category/li-xi" onClick={() => {window.scroll(0, 0)}}><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/Lixi%20/NEW%20S3/NEW%20S3/HQ22-1.png?updatedAt=1704630031008" class="rounded-full ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px]  shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Lì Xì </p></li></Link> 
+             <Link rel="canonical" to="/category/day-treo-trung-quoc" onClick={() => {window.scroll(0, 0)}}><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/CON%20LAI/TQT12.png?updatedAt=1704207048473" class="rounded-full ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px] shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Dây treo Trung Quốc </p></li> </Link>
+             <Link rel="canonical" to="/category/day-treo-viet-nam" onClick={() => {window.scroll(0, 0)}}><li class="flex flex-col justify-around items-center p-3 mr-10 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/S3/PT20.png?updatedAt=1700581823503" class="rounded-full md:w-[110px]  md:h-[110px] w-[80px] h-[80px] ml-auto mr-auto  shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px] ">Dây treo Việt Nam </p></li> </Link>
+             <Link rel="canonical" to="/category/dan-tuong" onClick={() => {window.scroll(0, 0)}}><li class="flex flex-col justify-around items-center p-3 font-medium mt-3"><img src="https://ik.imagekit.io/39wvgoqre/dantuong/LT/LT10.png?updatedAt=1704274058056" class="rounded-full  ml-auto mr-auto md:w-[110px]  md:h-[110px] w-[80px] h-[80px] shadow-lg" /><p class="text-center  mt-2 max-w-[100px] h-[45px]">Dán Tường</p></li> </Link>
            </ul>
            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-5 md:hidden "> 
               <div class="bg-white text-[14px] shadow-lg md:min-h-[250px] h-[157px]  flex justify-center items-center border-2">
-              <Link to="/category/li-xi">
+              <Link rel="canonical" onClick={() => {window.scroll(0, 0)}} to="/category/li-xi">
               <div class="flex flex-col justify-around items-center p-3  font-medium  ml-auto mr-auto h-auto">
-              <img src="https://ik.imagekit.io/39wvgoqre/lixi/44078530e517314968068.jpg?updatedAt=1697721108570" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
+              <img src="https://ik.imagekit.io/39wvgoqre/Lixi%20/NEW%20S3/NEW%20S3/HQ22-1.png?updatedAt=1704630031008" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
               <p class="text-center  mt-2 max-w-[100px] h-[45px] text-[16px] font-bold">Lì Xì </p>
               </div>
               </Link>
               </div>
               <div class="bg-white shadow-lg flex justify-center items-center border-2">
-              <Link to="/category/day-treo-trung-quoc"> 
+              <Link rel="canonical" onClick={() => {window.scroll(0, 0)}} to="/category/day-treo-trung-quoc"> 
               <div class="flex flex-col justify-around items-center p-3  font-medium rounded-lg ml-auto mr-auto h-auto">
-              <img src="https://ik.imagekit.io/39wvgoqre/day%20treo%20trung%20quoc/27%20day%20treo/ed893a6f7dc5a99bf0d4143.jpg?updatedAt=1698066729993" class="rounded-full ml-auto mr-auto md:w-[120px] md:h-[120px] w-[80px] h-[80px] shadow-lg" />
+              <img src="https://ik.imagekit.io/39wvgoqre/CON%20LAI/TQT12.png?updatedAt=1704207048473" class="rounded-full ml-auto mr-auto md:w-[120px] md:h-[120px] w-[80px] h-[80px] shadow-lg" />
               <p class="text-center  mt-2 max-w-[100px] h-[45px] text-[16px] font-bold">Dây Treo Trung Quốc </p>
               </div>
               </Link>
               </div>
-              <Link to="/category/day-treo-viet-nam">
+              <Link rel="canonical" onClick={() => {window.scroll(0, 0)}} to="/category/day-treo-viet-nam">
               <div class="bg-white shadow-lg flex justify-center items-center border-2">
               <div class="flex flex-col justify-around items-center p-3  font-medium rounded-lg ml-auto mr-auto h-auto">
-              <img src="https://ik.imagekit.io/39wvgoqre/day%20treo%20viet%20nam/44%20day%20treo/f94fdd6971c5a59bfcd4577.jpg?updatedAt=1698067151377" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
+              <img src="https://ik.imagekit.io/39wvgoqre/S3/PT20.png?updatedAt=1700581823503" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
               <p class="text-center  mt-2 max-w-[100px] h-[45px] text-[16px] font-bold">Dây treo Việt Nam </p>
               </div>
               </div>
               </Link>
-              <Link to="/category/dan-tuong">
+              <Link rel="canonical" onClick={() => {window.scroll(0, 0)}} to="/category/dan-tuong">
               <div class="bg-white shadow-lg flex justify-center items-center border-2">
               <div class="flex flex-col justify-around items-center p-3  font-medium rounded-lg ml-auto mr-auto h-auto">
-              <img src="https://ik.imagekit.io/39wvgoqre/c3fcb21f1eb3caed93a2593.jpg?updatedAt=1697719352705" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
+              <img src="https://ik.imagekit.io/39wvgoqre/dantuong/LT/LT10.png?updatedAt=1704274058056" class="rounded-full ml-auto mr-auto md:w-[120px]  md:h-[120px] w-[80px] h-[80px] shadow-lg" />
               <p class="text-center  mt-2 max-w-[100px] h-[45px] text-[16px] font-bold">Dán Tường </p>
               </div>
               </div>
@@ -239,7 +262,7 @@ const saveProduct = () => {
               >
                 {relatedProducts.map((product) => (
                   <SwiperSlide key={product.id}>
-                    <Link to={`/product/${product.slug}`} onClick={scrollToTop}>
+                    <Link rel="canonical" to={`/product/${product.slug}`} onClick={scrollToTop}>
                     <div
                       className="cursor-pointer   w-full min-h-[350px] shadow-lg mt-5 mb-5 text-left py-3 sm:px-3 px-2 text-[14px] sm:text-[16px] bg-white  relative rounded overflow-hidden group border-2 border-[#f2f2f2]"
                     >

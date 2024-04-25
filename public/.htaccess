@@ -1,4 +1,9 @@
 Options -MultiViews
 RewriteEngine On
+# Redirect to www subdomain if not already
+RewriteCond %{HTTP_HOST} ^trangtritetshop\.com$ [NC]
+RewriteRule ^ https://www.trangtritetshop.com%{REQUEST_URI} [L,R=301]
+
+# Rewrite to index.html if the requested file doesn't exist
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]

@@ -57,9 +57,9 @@ const DanTuongProduct = () => {
             <div>
                 <div class=" w-full min-h-[30px] flex justify-between  items-end rounded-lg text-left ">
                 <h2 class="font-bold text-center px-2  text-[22px]   text-[#700114] underline underline-offset-8 ">Dán Tường Các Loại</h2>
-                <Link to="/category/dan-tuong" onClick={() => {   window.scrollTo(0, 0)}} > <p class=" md:flex cursor-pointer font-bold hidden">Xem Thêm <IoIosArrowForward class="mt-1" /></p> </Link>
+                <Link rel="canonical" to="/category/dan-tuong" onClick={() => {   window.scrollTo(0, 0)}} > <p class=" md:flex cursor-pointer font-bold hidden">Xem Thêm <IoIosArrowForward class="mt-1" /></p> </Link>
                 </div>
-                <Link to="/category/dan-tuong" onClick={() => {   window.scrollTo(0, 0)}}> <p class="text-white mt-4 flex cursor-pointer font-bold md:hidden ml-2 text-right">Xem Thêm <IoIosArrowForward class="mt-1" /></p> </Link>
+                <Link rel="canonical" to="/category/dan-tuong" onClick={() => {   window.scrollTo(0, 0)}}> <p class="text-[#700114] mt-4 flex cursor-pointer font-bold md:hidden ml-2 text-right">Xem Thêm <IoIosArrowForward class="mt-1" /></p> </Link>
 
             {
                 products ? (
@@ -68,7 +68,7 @@ const DanTuongProduct = () => {
                        
                       {products.map((product) => (
                      <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg    bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]" >
-                     <Link to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                     <Link rel="canonical" to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                      <div>
                      <LazyLoadImage
                       alt={product.photo}

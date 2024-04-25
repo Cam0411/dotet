@@ -35,7 +35,7 @@ const Popular = () => {
      }
      const loadMore = () => {
         // Increase the number of visible products
-        setVisibleProducts(visibleProducts + 8);
+        setVisibleProducts(visibleProducts + 16);
       };
     return (
         <div class="min-h-[490px] px-0  sm:px-3 pt-3 pb-1  mt-[10px]" >
@@ -68,7 +68,7 @@ const Popular = () => {
                        
                       {products.slice(0, visibleProducts).map((product) => (
                           <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
-                            <Link to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                            <Link rel="canonical" to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                             <div>
                             <LazyLoadImage
                              alt={product.photo}
@@ -91,7 +91,7 @@ const Popular = () => {
                 )
         }
         <div class="flex justify-center">
-         {products?.length >= 8 ? (         <p class=" cursor-pointer ml-2 p-3 bg-[#ffd84b] shadow-lg rounded text-[#700114] font-bold mb-5  mt-5"  onClick={loadMore}>Xem Thêm</p>) : ''  }
+         {products?.length >= 8 ? ( <p class=" cursor-pointer ml-2 p-3 bg-[#ffd84b] shadow-lg rounded text-[#700114] font-bold mb-5  mt-5"  onClick={loadMore}>Xem Thêm</p>) : ''  }
          </div>
 
     

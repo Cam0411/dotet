@@ -1,6 +1,7 @@
 
 import Header from "../component/header"
 import DetailProduct from "../component/setUpPoducts/detailPage"
+import Social from "../component/social/social"
 import Footer from "../component/footer"
 const PageDetail = () => {
 
@@ -8,6 +9,7 @@ const PageDetail = () => {
         <div class="">
             <Header />
             <DetailProduct />
+            <Social />
             <Footer />
         </div>
     )

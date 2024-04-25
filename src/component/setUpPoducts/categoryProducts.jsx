@@ -41,7 +41,7 @@ const Category = () => {
     },[category])
     const loadMore = () => {
         // Increase the number of visible products
-        setVisibleProducts(visibleProducts + 8);
+        setVisibleProducts(visibleProducts + 16);
         if (products?.length < visibleProducts) {
             setCheckLength(true);
              setTimeout(() => {
@@ -56,16 +56,16 @@ const Category = () => {
         <div class=" bg-[#f2f2f2] mb-10 min-h-[200vh]">
             <div class="h-auto ">
             <div class="min-h-[200px] ">
-             <div class="max-w-[1200px] mr-auto ml-auto h-auto py-3 sm:px-3 px-1 md:mt-[100px] mt-[180px]">
+             <div class="max-w-[1200px] mr-auto ml-auto h-auto py-3 sm:px-3 px-1 md:mt-[160px] mt-[230px]">
                 <div class="text-left flex">
                   <p class="flex font-bold md:text-[16px] text-[14px]"><Link to="/" class="flex items-center font-bold cursor-pointer">Trang chủ <MdOutlineArrowForwardIos class="mx-1" /> </Link> <span class="text-[#700114]">{firstProductCategory}</span>  </p>
                 </div>
                     <div class=" grid grid-cols-1 sm:grid-cols-2 mt-5 mb-5  relative rounded-md gap-3">
                         <div class=" overflow-hidden group rounded-md">
-                          <img src="https://static.vecteezy.com/system/resources/previews/027/013/568/non_2x/chinese-new-year-2024-postcard-greeting-invitation-year-of-a-dragon-card-with-golden-numbers-and-drawing-of-a-chinese-dragon-banner-vector.jpg" alt="" srcset="" class="group-hover:scale-[1.02] duration-300 cursor-pointer drop-shadow-lg" />
+                          <img src="https://static.vecteezy.com/system/resources/previews/027/013/568/non_2x/chinese-new-year-2024-postcard-greeting-invitation-year-of-a-dragon-card-with-golden-numbers-and-drawing-of-a-chinese-dragon-banner-vector.jpg" alt="banner" srcset="" class="group-hover:scale-[1.02] duration-300 cursor-pointer drop-shadow-lg" />
                         </div>
                         <div class=" overflow-hidden group rounded-md">
-                        <img src="https://static.vecteezy.com/system/resources/previews/027/013/568/non_2x/chinese-new-year-2024-postcard-greeting-invitation-year-of-a-dragon-card-with-golden-numbers-and-drawing-of-a-chinese-dragon-banner-vector.jpg" alt="" srcset="" class="group-hover:scale-[1.02] duration-300 cursor-pointer drop-shadow-lg"  />
+                        <img src="https://static.vecteezy.com/system/resources/previews/027/013/568/non_2x/chinese-new-year-2024-postcard-greeting-invitation-year-of-a-dragon-card-with-golden-numbers-and-drawing-of-a-chinese-dragon-banner-vector.jpg" alt="banner2" srcset="" class="group-hover:scale-[1.02] duration-300 cursor-pointer drop-shadow-lg"  />
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Category = () => {
                        
                       {products.slice(0, visibleProducts).map((product) => (
                      <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]" data-aos="zoom-in" data-aos-once="true">
-                     <Link to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                     <Link rel="canonical" to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                      <div>
                      <LazyLoadImage
                       alt={product.photo}

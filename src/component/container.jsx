@@ -4,6 +4,7 @@ import BestProduct from "./setUpPoducts/bestProduct";
 import AllCategoryProduct from "./setUpPoducts/allProduct";
 import DayTreoProduct from "./setUpPoducts/HomePagedaytreo";
 import DanTuongProduct from "./setUpPoducts/HomePageDanTuong";
+import DaytreoCategory from "./setUpPoducts/daytreocategory";
 import { useEffect } from "react";
 
 
@@ -35,20 +36,32 @@ const Container = () => {
             <div class="min-h-[200px]">
                 <div class="max-w-[1200px] mr-auto ml-auto h-auto py-3 sm:px-3 px-2">
                     <div class=" grid grid-cols-1 md:grid-cols-2 mt-5  gap-5  relative rounded-md">
-                         <div class="text-left sm:p-2 p-0">
-                           <h2 class="text-[18px] font-bold">Tận hưởng Tết Nguyên Đán với Sự Phong Phú từ Bộ Sưu Tập Sản Phẩm Tết của Chúng Tôi</h2>
+                         <div class="text-left sm:p-2 p-0 flex flex-col justify-center items-center">
+                           <h2 class="text-[20px] font-bold">Tận hưởng Tết Nguyên Đán với Sự Phong Phú từ Bộ Sưu Tập Sản Phẩm Tết của Chúng Tôi</h2>
                            <p class="mb-2">Khám phá những sản phẩm tết đa dạng và chất lượng cao, chẳng hạn như đèn lồng, phụ kiện trang trí và quà biếu tặng, để tạo nên một không gian ấm cúng và tràn ngập niềm vui cho gia đình bạn.</p>
-                           <h2 class="text-[18px] font-bold">Góp Phần Làm Cho Tết Thêm Ý Nghĩa với Sản Phẩm Tết Chất Lượng</h2>
+                           <h2 class="text-[20px] font-bold">Góp Phần Làm Cho Tết Thêm Ý Nghĩa với Sản Phẩm Tết Chất Lượng</h2>
                            <p class="mb-2">Chúng tôi tự hào cung cấp những sản phẩm tết chất lượng, từ đèn lồng truyền thống đến những món quà ý nghĩa. Hãy kết nối với chúng tôi để tạo ra một Tết truyền thống và ý nghĩa hơn.</p>
-                           <h2 class="text-[18px] font-bold">Mang Lại Không Khí Tết Ấm Áp với Sản Phẩm Tết Chất Lượng Cao</h2>
+                           <h2 class="text-[20px] font-bold">Mang Lại Không Khí Tết Ấm Áp với Sản Phẩm Tết Chất Lượng Cao</h2>
                            <p class="mb-2">Không gian trang trí ấm cúng và phong cách đặc trưng cho mùa lễ. Chọn lựa từ bộ sưu tập sản phẩm tết đa dạng của chúng tôi để tạo nên một không gian Tết độc đáo và đáng nhớ.</p>
                          </div>
-                        <div class=" overflow-hidden group rounded-md flex justify-center items-center">
-                        <img src="https://static.vecteezy.com/system/resources/previews/027/013/568/non_2x/chinese-new-year-2024-postcard-greeting-invitation-year-of-a-dragon-card-with-golden-numbers-and-drawing-of-a-chinese-dragon-banner-vector.jpg" alt="" srcset="" class="group-hover:scale-[1.02] duration-300 cursor-pointer drop-shadow-lg"  />
+                        <div class=" grid grid-cols-2 gap-2">
+                               <div>
+                                <a href="https://www.trangtritetshop.com/product/day-treo-viet-nam-thoi-vang-chu-phuc-(-hv58-)"> <img src="https://ik.imagekit.io/39wvgoqre/HV48.png?updatedAt=1701019830337"  /></a> 
+                               </div>
+                               <div>
+                                 <a href="https://www.trangtritetshop.com/product/day-treo-trung-quoc-bo-long-djen-ca-chep-(tqt75)"><img src="https://ik.imagekit.io/39wvgoqre/61%20DAU/61%20DAU/TQT75.png?updatedAt=1701935057079"   /></a> 
+                               </div>
+                               <div>
+                                 <a href="https://www.trangtritetshop.com/product/day-treo-trung-quoc-djong-tien-long-djen-hoat-tiet-(tqt69)"><img src="https://ik.imagekit.io/39wvgoqre/61%20DAU/61%20DAU/TQT69.png?updatedAt=1701935057253"   /></a>  
+                               </div>
+                               <div>
+                                 <a href="https://www.trangtritetshop.com/product/day-treo-viet-nam-chu-phuc-tai-tien-vang-(hv46)"> <img src="https://ik.imagekit.io/39wvgoqre/HV46.png?updatedAt=1701019828509" /></a> 
+                               </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <DaytreoCategory />
             {/* // set up category */}
             <Popular />
           
@@ -72,9 +85,7 @@ const Container = () => {
                 </div>
               </div>
             </div>
-             <div class="fixed bottom-2 right-2  animate-bounce rounded-full bg-white cursor-pointer pr-1 pt-1 ">
-               <img class="w-[60px]" src="https://ik.imagekit.io/39wvgoqre/logo/zalo.png?updatedAt=1699624297978" alt="zalo" />
-             </div>
+       
         </div>
     )
 }

@@ -42,7 +42,7 @@ const Search = () => {
                        
                   {products.slice(0, visibleProducts).map((product) => (
                  <div key={product.id} class="cursor-pointer w-full text-[14px] xl:text-[16px] text-left ml-auto mr-auto  min-h-[350px] shadow-lg  mt-5  bg-white p-3 relative rounded overflow-hidden group border-2 border-[#f2f2f2]">
-                 <Link to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
+                 <Link rel="canonical" to={`/product/${product.slug}`} onClick={() => { window.scroll(0, 0)}}>
                  <div>
                  <img
                   alt={product.photo}

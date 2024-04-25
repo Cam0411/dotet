@@ -9,7 +9,7 @@ const SaveProduct = () => {
     return (
         <div class="min-h-[100vh]">
             <div class="mt-[150px] max-w-[900px] ml-auto mr-auto p-2">
-                <h1 class="font-medium text-[20px]  border-[#000] mt-[50px] md:mt-0 ">Danh sách sản phẩm</h1>
+                <h1 class="font-medium text-[20px]  border-[#000] mt-[80px] md:mt-5 ">Danh sách sản phẩm</h1>
                 <p>Nếu bạn quan tâm đến việc mua sỉ hoặc muốn biết thêm về các chương trình ưu đãi đặc biệt, chúng tôi luôn sẵn lòng hỗ trợ. Hãy liên hệ với chúng tôi qua số điện thoại: <span class="font-bold underline underline-offset-4">0903-133-689 </span> hooặc email: <span class="font-bold underline underline-offset-4">khakimha80@gmail.com </span>để biết thêm thêm thông tin.</p>
                 <div class="bg-white rounded shadow-lg min-h-[200px] hidden sm:block mt-5 p-3">
                    <div class="grid grid-cols-4 mb-4">
@@ -73,6 +73,7 @@ const SaveProduct = () => {
                    </div>
                 </div>
             </div>
+            
         </div>
     )
 }

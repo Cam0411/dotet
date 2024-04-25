@@ -1,5 +1,6 @@
 import Header from "../component/header";
 import Category from "../component/setUpPoducts/categoryProducts";
+import Social from "../component/social/social";
 import Footer from "../component/footer"
 const CategoryPage = () => {
 
@@ -7,6 +8,7 @@ const CategoryPage = () => {
         <div>
             <Header />
             <Category />
+            <Social />
             <Footer />
         </div>
     )

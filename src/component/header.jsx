@@ -1,5 +1,9 @@
 import {AiOutlineMail,AiOutlineSearch,AiOutlineMenu} from "react-icons/ai"
 import { Link,useLocation,useNavigate} from "react-router-dom";
+import { FaPhone } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { SiZalo } from "react-icons/si";
+import { FaLocationDot } from "react-icons/fa6";
 import {useState} from "react"
 import MobileMenu from "./mobileMenu";
 const Header = () => {
@@ -28,32 +32,46 @@ const Header = () => {
         }
     }
     return (
-        <div class="min-h-[80px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] fixed top-0 left-0 right-0 shadow-lg z-10 ">
+        <div class="min-h-[80px] bg-gradient-to-r from-[#bb2d0d] to-[#700114] fixed top-0 left-0 right-0 shadow-lg z-50 ">
+          <div class="min-h-[50px] bg-[#5b0302] flex justify-end items-center md:px-2 px-0">
+            
+             <ul class="flex">
+               <li class="text-[#ffd84b] text-[14px] mx-4 hidden md:flex"><a href="https://mail.google.com/mail/?view=cm&to=khakimha80@gmail.com" class="flex"><IoMdMail class="mt-1 mr-2" /> <span  class="">khakimha80@gmail.com</span></a> </li>
+               <li class="text-[#ffd84b] md:text-[14px]  text-[12px] md:mx-4 mx-2 flex"><a href="tel:0903133689" class="flex"><FaPhone class="mt-1 mr-2" /> <span class="">0903-133-689 </span></a></li>
+               <li class="text-[#ffd84b] md:text-[14px]  text-[12px] md:mx-3 mx-2"><a class="flex" href="https://zalo.me/0903133689"><p class="mr-2 font-bold">Zalo</p> <span class="">0903-133-689 </span></a></li>
+             </ul>
+             {/* <p class="text-[#ffd84b]"><span>Zalo: </span>0903-133-689</p> */}
+          </div>
          <div class=" flex justify-between items-center w-full h-[80px] "> 
+
            <div class="bg-gradient-to-r from-[#f5ac27]  to-[#ffd84b] rounded-r-full w-[80%] xl:w-[30%] md:w-[40%] h-full flex justify-start items-center">
+          
            <p class="text-[52px]   bg-clip-text text-transparent bg-gradient-to-r from-[#700114] to-[#a3262a] font-black p-1">HÀ</p>
+           <div>
+          
+           </div>
            </div>
            <div class="hidden md:flex relative border-b-2 overflow-hidden  justify-between items-center text-white bg-white rounded-full shadow-lg  w-[300px]">
           <input class=" h-10 px-3 pr-16  text-black focus:outline-none " type="text"  placeholder="Tìm Kiếm" onChange={handleSearchInputChange}  onKeyPress={searchQuery.length !== 0 ? handleKeyPress : undefined}/>
            <AiOutlineSearch class="text-[22px] text-black mr-2 mt-1 cursor-pointer" onClick={handleSearch}/>
           </div>
              <ul class="hidden sm:hidden xl:flex text-white font-bold px-5 ">
-              <Link to="/" className={location.pathname === '/' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`mr-3`}>Trang chủ</li> </Link> 
-              <Link to="/about-us" className={location.pathname === '/about-us' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`mx-3`}>Về chúng tôi</li> </Link> 
+              <Link  to="/" className={location.pathname === '/' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`mr-3`}>Trang chủ</li> </Link> 
+              <Link  to="/about-us" className={location.pathname === '/about-us' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`mx-3`}>Về chúng tôi</li> </Link> 
             <li class="hidden mx-3 group lg:flex relative cursor-pointer" >
                  <div class="absolute bg-white shadow-lg hidden group-hover:block top-[100%] rounded">
               <ul class="text-[black] max-w-[350px] text-left">
-              <Link to="/category/li-xi" className={location.pathname === '/category/li-xi' ? 'text-[#700114] bg-[#700114] font-bold' : ''}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300 cursor-pointer" onClick={() => {window.scrollTo(0,0)}}>Lì xì</li> </Link>
-              <Link to="/category/day-treo-trung-quoc" className={location.pathname === '/category/day-treo-trung-quoc' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dây treo Trung Quốc</li> </Link>
-              <Link to="/category/day-treo-viet-nam" className={location.pathname === '/category/day-treo-viet-nam' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dây treo Việt Nam</li> </Link>
-              <Link to="/category/dan-tuong" className={location.pathname === '/category/dan-tuong' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>  <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dán Tường</li> </Link> 
+              <Link  to="/category/li-xi" className={location.pathname === '/category/li-xi' ? 'text-[#700114] bg-[#700114] font-bold' : ''}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300 cursor-pointer" onClick={() => {window.scrollTo(0,0)}}>Lì xì</li> </Link>
+              <Link  to="/category/day-treo-trung-quoc" className={location.pathname === '/category/day-treo-trung-quoc' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dây treo Trung Quốc</li> </Link>
+              <Link  to="/category/day-treo-viet-nam" className={location.pathname === '/category/day-treo-viet-nam' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>   <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dây treo Việt Nam</li> </Link>
+              <Link  to="/category/dan-tuong" className={location.pathname === '/category/dan-tuong' ? 'text-[#700114] bg-[#700114] font-bold' : ''} onClick={() => { window.scrollTo(0, 0)}}>  <li class="p-2 py-3 hover:bg-[#700114] hover:text-white duration-300">Dán Tường</li> </Link> 
               </ul>
             </div>
           
             <p  className={`${location.pathname.startsWith('/category/')  ? 'text-[#ffd84b]' : ''} flex`}>  <AiOutlineMenu  class="mt-1 text-[32px] sm:text-[17px]  relative mr-1"/> Danh mục sản phẩm</p>
           
             </li>
-            <Link to="/save-product" className={location.pathname === '/save-product' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`ml-3`}>Mục yêu thích</li> </Link> 
+            <Link  to="/save-product" className={location.pathname === '/save-product' ? 'text-[#ffd84b] font-bold' : ''} onClick={() => {   window.scrollTo(0, 0)}}> <li class={`ml-3`}>Mục yêu thích</li> </Link> 
 
              </ul> 
             

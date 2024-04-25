@@ -1,6 +1,6 @@
 const AboutUsContent = () => {
     return (
-        <div class="min-h-[100vh] md:mt-[150px] mt-[200px] max-w-[900px] ml-auto mr-auto p-2">
+        <div class="min-h-[100vh] md:mt-[170px] mt-[240px] max-w-[900px] ml-auto mr-auto p-2">
             <div class="text-left">
                 <h1 class="font-bold text-[20px] mb-2 border-b-2 pb-2 border-[#000]">Chào Mừng Đến với Hà Shop - Chuyên Phân Phối Sỉ Đồ Tết</h1>
                 <p> - Chúng tôi tự hào là đối tác hàng đầu trong lĩnh vực phân phối sỉ đồ tết, mang đến những sản phẩm độc đáo và chất lượng cao để làm phong phú thêm không khí tết ngập tràn niềm vui và ý nghĩa</p>
